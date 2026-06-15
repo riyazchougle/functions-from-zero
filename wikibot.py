@@ -3,7 +3,7 @@ from mylib.bot import scrape
 
 
 @click.command()
-@click.option("--name", help="Web page we want to scrape")
+@click.option("--name", default="Microsoft", help="Web page we want to scrape")
 def cli(name):
     result = scrape(name)
     click.echo(click.style(f"{result}:", fg="blue"))
